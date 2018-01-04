@@ -1,0 +1,105 @@
+Genome tools
+
+http://genometools.org/tools/gt.html
+
+http://genometools.org/
+
+https://www.biostars.org/p/111339/
+
+gt gff3 -sort -tidy ref_Amel_4.5_top_level.gff3 | gt stat -genelengthdistri -genescoredistri -exonlengthdistri -exonnumberdistri -intronlengthdistri -cdslengthdistri -o out.txt
+
+gt stat -help
+
+
+gt gff3 -sort -tidy -sortlines -checkids -fixregionboundaries -force -o test.gff Mp_O_v1.gff
+
+gt gff3 -sort -tidy -sortlines -checkids -fixregionboundaries -retainids yes -force -o Apisum_predictions_PT_20160413.gff3 Apisum_predictions_PT_20160413.gff
+
+gt gff3_to_gtf -force -o GTOOLS.gtf test.gff
+
+# if all else fails!
+gffread test2.gff -T -o GTOOLS.gtf
+
+STEPS 1)
+
+convert augustus.gft to gff3
+
+gt gtf_to_gff3 -o test.gff3 -tidy augustus.gtf
+
+STEP 2)
+
+get stats on this new file
+
+gt stat -force -genelengthdistri -genescoredistri -exonlengthdistri -exonnumberdistri -intronlengthdistri -cdslengthdistri -o Mc_braker_stats.txt test.gff3
+
+
+STEP 1 and 2:)
+
+gt gff3 -sort -tidy Mcerasi_complete_finalv1_pea_aphid_RNASEQ001.gff | gt stat -genelengthdistri -genescoredistri -exonlengthdistri -exonnumberdistri -intronlengthdistri -cdslengthdistri -o out.txt
+
+###############################################################################################
+	
+gt gff3 -sort -tidy *.gff | gt stat -force -genelengthdistri -o augustus_genelengthdistri.STAT
+
+wait
+
+gt gff3 -sort -tidy *.gff | gt stat -force -genescoredistri -o augustus_genescoredistri.STAT
+wait
+
+gt gff3 -sort -tidy *.gff | gt stat -force -exonlengthdistri -o augustus_exonlengthdistri.STAT
+
+wait
+gt gff3 -sort -tidy *.gff | gt stat -force -exonnumberdistri -o augustus_exonnumberdistri.STAT
+
+wait
+gt gff3 -sort -tidy *.gff | gt stat -force -intronlengthdistri -o augustus_intronlengthdistri.STAT
+
+wait
+gt gff3 -sort -tidy *.gff | gt stat -force -cdslengthdistri -o augustus_cdslengthdistri.STAT
+
+gt gff3 -sort -tidy *.gff3 | gt stat -force -exonlengthdistri -o augustus_exonlengthdistri.STAT
+
+wait
+gt gff3 -sort -tidy *.gff3 | gt stat -force -exonnumberdistri -o augustus_exonnumberdistri.STAT
+
+
+
+##########################################################################################################
+# gff3
+
+
+gt gff3 -sort -tidy -addintrons *.gff3 | gt stat -force -genelengthdistri -o augustus_genelengthdistri.STAT
+
+wait
+
+gt gff3 -sort -tidy -addintrons *.gff3 | gt stat -force -genescoredistri -o augustus_genescoredistri.STAT
+wait
+
+gt gff3 -sort -tidy -addintrons *.gff3 | gt stat -force -exonlengthdistri -o augustus_exonlengthdistri.STAT
+
+wait
+gt gff3 -sort -tidy -addintrons *.gff3 | gt stat -force -exonnumberdistri -o augustus_exonnumberdistri.STAT
+
+wait
+gt gff3 -sort -tidy -addintrons *.gff3 | gt stat -force -intronlengthdistri -o augustus_intronlengthdistri.STAT
+
+wait
+gt gff3 -sort -tidy -addintrons *.gff3 | gt stat -force -cdslengthdistri -o augustus_cdslengthdistri.STAT
+
+
+##########################################################################################################
+# gff
+
+gt gff3 -sort -tidy -addintrons *.gff | gt stat -force -genelengthdistri -o augustus_genelengthdistri.STAT
+wait
+gt gff3 -sort -tidy -addintrons *.gff | gt stat -force -genescoredistri -o augustus_genescoredistri.STAT
+wait
+gt gff3 -sort -tidy -addintrons *.gff | gt stat -force -exonlengthdistri -o augustus_exonlengthdistri.STAT
+wait
+gt gff3 -sort -tidy -addintrons *.gff | gt stat -force -exonnumberdistri -o augustus_exonnumberdistri.STAT
+wait
+gt gff3 -sort -tidy -addintrons *.gff | gt stat -force -intronlengthdistri -o augustus_intronlengthdistri.STAT
+wait
+gt gff3 -sort -tidy -addintrons *.gff | gt stat -force -cdslengthdistri -o augustus_cdslengthdistri.STAT
+
+
