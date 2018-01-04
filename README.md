@@ -27,6 +27,9 @@ Bless error corrected reads were tried but not used in the final assembly.
 ``BUSCO.sh``
 ``cegma_all.sh``
 
+R. padi genomic reads can be obtained from this: study accession number is: PRJEB24204 Sample	ERS2070958 (SAMEA104453016)
+The lib prep was PCR-free with an insert size avergae of 405bp. The reads were 2X250bp on HiSeq 2500. This is what DISCOVAR assembler requires.
+
 Gene models
 ===========
 RNAseq data from previous aphid studies was used, for heads versus bodies RNAseq data: 
