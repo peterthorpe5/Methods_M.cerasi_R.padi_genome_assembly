@@ -33,7 +33,7 @@ RNAseq data from previous aphid studies was used, for heads versus bodies RNAseq
 
 ``Data_Summary_APHID_RNASEQ.xlsx``
 
-PRJEB9912 http://www.ebi.ac.uk/ena/data/view/PRJEB9912
+PRJEB9912: http://www.ebi.ac.uk/ena/data/view/PRJEB9912
 
 
 Diuraphis noxia data from:
@@ -95,6 +95,10 @@ https://github.com/peterthorpe5/public_scripts/tree/master/reformat_fasta_hints_
 5) Gene models testing and interogation was used with this:
 https://github.com/peterthorpe5/public_scripts/tree/master/gene_model_testing
 
+This was used to gain an insight in the amount of RNAseq mapping the was to gene models, gene number, lenght etc ... BLAST versus NR with and without filtering for pea aphid, arthropoda. Alignment to known - cloned 
+sequences. This helped us identify that the Braker method also produced much better intron exon boundry prediction when aligned to our known - cloned sequences verus Augustus run with 
+the pea aphid config files. 
+
 
 Gene model annotation and analysis
 ==================================
@@ -132,8 +136,12 @@ https://github.com/peterthorpe5/public_scripts/tree/master/convert_file_format
 13) For promoter finding, genomic upstream regions was obtained using:
 https://github.com/peterthorpe5/public_scripts/tree/master/genomic_upstream_regions
 
-14) Heat map were drawn using ggplot and R. Data was prepared using:
-``catorgorise_genes_for_heat_map.py``  and  ``heat_map_R_script.R``
+14) Effectors: data from  http://www.ebi.ac.uk/ena/data/view/PRJEB9912 was mapped to the genomes for M. cerasi, M. persicae (Genotype O data only) and R. padi. The libraries 
+were head and bodies. Differential expression analysis identified the gene upregulated in heads versus bodies. Phobius was used to identify 
+genes that encoded a signal peptide and no transmembrane domain. Saliva proteomic data from https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-2496-6 
+was mapped to the predicted genes from M. cerasi, M. persicae and R. padi using Max Quant. Identified gene were again interogated for a signal peptide and no transmembrane domain. 
+Any genes passing these criteria were considered putative effectors. For A. pisum, as there have been new gene calls, any gene that was 
+greater 95% identity (BLASTp) to saliva protein identified (Carolan et al., 2011) (DOI:10.1021/pr100881q) were considered putative effectors from A. pisum.
 
 15) Introgation of transposons was perfomed using:
 https://github.com/peterthorpe5/public_scripts/tree/master/transposon_analysis
@@ -162,15 +170,18 @@ Transrate was also used to gain a quantitative measure of the number of reads th
 21) Transposon and repetitive element prediction:
 https://github.com/HullUni-bioinformatics/TE-search-tools
 
+Once a collection of aphid specific repeats were modelled/ generated, CD-HIT-est was used at 100% to remove redundancy. This aphid de novo set of calssified repeats 
+and repbase was then used to mask the genomes and predict transposons from all species. 
+
 ``wheat_LTR_TE_finding.sh`` and ``wheat_aphid_TE_finding.sh``
 
-22) Differential exon expression:
+22) Differential exon expression, although not reported on, this was performed anyway:
 ``Mp_Hosts_non_hosts_DE_exons_R_commands.sh`` and ``exon_counts.sh``
 
 23) Differential expression:
 ``Diff_Expression_trinity_Aug_2014_gene_models.sh``
 
-24) RNAseq mapping host and nonhost:
+24) RNAseq mapping host and nonhost (STAR):
 ``Mp_host_non_map_to_genome.sh``
 
 25) GFF fixing and formatting, jaccard statistic was done using genometools and bedtools:
@@ -180,7 +191,13 @@ https://github.com/HullUni-bioinformatics/TE-search-tools
 GO and PFAM mapping was perfomed using the GUI:
 ``Rp_vs_nr_xml.sh``
 
-27) Single copy busco genes were identified using script in BUSCO_phylogenetics.
+27) Single copy busco genes were identified using scripts in BUSCO_phylogenetics.
+
+28) Heat map were drawn using ggplot and R. Data was prepared using:
+``catorgorise_genes_for_heat_map.py``  and  ``heat_map_R_script.R``
+
+Genes at the start or end of contigs were not drawn on the heat map and were not considered in distance calculations.
+
 
 
 
