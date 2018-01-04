@@ -171,7 +171,7 @@ Transrate was also used to gain a quantitative measure of the number of reads th
 https://github.com/HullUni-bioinformatics/TE-search-tools
 
 Once a collection of aphid specific repeats were modelled/ generated, CD-HIT-est was used at 100% to remove redundancy. This aphid de novo set of calssified repeats 
-and repbase was then used to mask the genomes and predict transposons from all species. 
+and repbase was then used to mask the genomes and predict transposons from all species. Transposable elements can be found in the folder ``transposable_elements``
 
 ``wheat_LTR_TE_finding.sh`` and ``wheat_aphid_TE_finding.sh``
 
