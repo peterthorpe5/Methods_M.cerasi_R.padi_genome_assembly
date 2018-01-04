@@ -1,11 +1,11 @@
-Methods used to assembly M.cerasi and R.padi genomes
-====================================================
+Methods used to assemble aphid genomes: M.cerasi and R.padi
+===========================================================
 
 basic usage for most python scripts (python folder, or follow links) to obtain the help menu:
 
 ``./script.py`` -h 
 
-genome assembly
+Genome assembly
 ===============
 1) First pass assemblies were generated using CLC. An interative process of contaminant read removal was performed, as can be seen in the following shell script. 
 8 rounds were performed for M. cerasi and 5 were performed for R. padi. However, at the time of assembly
