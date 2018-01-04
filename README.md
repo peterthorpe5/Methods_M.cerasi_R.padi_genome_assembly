@@ -1,4 +1,4 @@
-Methods used to assemble aphid genomes: M.cerasi and R.padi
+Methods used to assemble aphid genomes: M. cerasi and R. padi
 ===========================================================
 
 basic usage for most python scripts (python folder, or follow links) to obtain the help menu:
