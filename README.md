@@ -91,7 +91,7 @@ https://github.com/peterthorpe5/public_scripts/tree/master/gene_model_testing
 Gene model annotation and analysis
 ==================================
 
-6)signal peptide and transmembrane domain rediction was perfomed using:
+6) signal peptide and transmembrane domain rediction was perfomed using:
 ``PHOBIUS.sh``
 
 7) Diamond blast output was taxonomically annotated using:
