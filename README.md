@@ -198,6 +198,9 @@ GO and PFAM mapping was perfomed using the GUI:
 
 Genes at the start or end of contigs were not drawn on the heat map and were not considered in distance calculations.
 
+29) genome tools was used to interogate the old A. pisum gene model coordinate with the new gene models. If there was overlap then the gene is assigned old name to new name in /A.pisum:
+``A.pisum.AA.annotated_with_old_names.fasta.gz`` and 
+``A.pisum_OLD_to_NEW_GENES_overlap.tab.gz``
 
 
 
