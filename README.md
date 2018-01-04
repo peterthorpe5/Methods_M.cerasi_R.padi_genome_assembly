@@ -30,7 +30,9 @@ Bless error corrected reads were tried but not used in the final assembly.
 Gene models
 ===========
 RNAseq data from previous aphid studies was used, for heads versus bodies RNAseq data: 
+
 ``Data_Summary_APHID_RNASEQ.xlsx``
+
 Diuraphis noxia data from:
 
 http://www.ebi.ac.uk/ena/data/view/SRR1999270
