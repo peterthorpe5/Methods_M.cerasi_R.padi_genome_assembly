@@ -33,6 +33,9 @@ RNAseq data from previous aphid studies was used, for heads versus bodies RNAseq
 
 ``Data_Summary_APHID_RNASEQ.xlsx``
 
+PRJEB9912 http://www.ebi.ac.uk/ena/data/view/PRJEB9912
+
+
 Diuraphis noxia data from:
 
 http://www.ebi.ac.uk/ena/data/view/SRR1999270
