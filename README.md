@@ -7,7 +7,7 @@ basic usage for most python scripts (python folder, or follow links) to obtain t
 
 genome assembly
 ===============
-1)First pass assemblies were generated using CLC. An interative process of contaminant read removal was performed, as can be seen in the following shell script. 
+1) First pass assemblies were generated using CLC. An interative process of contaminant read removal was performed, as can be seen in the following shell script. 
 8 rounds were performed for M. cerasi and 5 were performed for R. padi. However, at the time of assembly
 Blobtools was in its infancy and this version was used: https://github.com/DRL/blobtools-light . 
 ``clc_assembly_remove_contaminants.sh``
