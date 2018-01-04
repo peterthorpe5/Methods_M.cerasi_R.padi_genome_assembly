@@ -96,19 +96,23 @@ Gene model annotation and analysis
 
 7) Diamond blast output was taxonomically annotated using:
 https://github.com/peterthorpe5/public_scripts/tree/master/Diamond_BLAST_add_taxonomic_info
+
 blast versus NR:
 ``Blast_vs_NR.sh``
 
 8) Intron analysis was interogeated using:
 https://github.com/DRL/GenomeBiology2016_globodera_rostochiensis/blob/master/scripts/extractRegionFromCoordinates.py
+
 https://github.com/peterthorpe5/public_scripts/tree/master/Introns
 
 9) Lateral/ Horizontal gene transfer was predicted using:
 https://github.com/peterthorpe5/public_scripts/tree/master/Lateral_gene_transfer_prediction_tool
+
 ``HGT_filtering_20170919.sh``
 
 10) Blast output filtering was applied using (top hits or taxonomocally filtered for example to remove pea aphid hits):
 https://github.com/peterthorpe5/public_scripts/tree/master/blast_output
+
 ``Blast_vs_NR.sh``
 
 11) Gene network Cluster interogation was performed using:
@@ -128,6 +132,7 @@ https://github.com/peterthorpe5/public_scripts/tree/master/transposon_analysis
 
 16) Recipricol best blast hit was performed. Clusters of interest were alined using muscle and refined using muscle. Alignments were converted to phylip files and dn/ds was calculated using codonphyml:
 ``dn_ds_from_1_to_1_cluster_parteners.sh``
+
 cluster interogation was perfomred using:
 ``Interogate_clusters_commands.sh``
 
@@ -136,6 +141,7 @@ cluster interogation was perfomred using:
 
 18) transrate was used to gain an insight into fused gene:
 ``transrate.sh``
+
 For R. padi there may be 300 genes that are fused due to significanlty different coverage along the gene. We decided not to act on this information. 
 Transrate was also used to gain a quantitative measure of the number of reads that map to the nt gene models. This wraps and uses SNAP for this process. 
 
@@ -147,6 +153,7 @@ Transrate was also used to gain a quantitative measure of the number of reads th
 
 21) Transposon and repetitive element prediction:
 https://github.com/HullUni-bioinformatics/TE-search-tools
+
 ``wheat_LTR_TE_finding.sh`` and ``wheat_aphid_TE_finding.sh``
 
 22) differential exon expression:
