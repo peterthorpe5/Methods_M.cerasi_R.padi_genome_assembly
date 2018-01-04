@@ -11,18 +11,18 @@ Genome assembly
 8 rounds were performed for M. cerasi and 5 were performed for R. padi. However, at the time of assembly
 Blobtools was in its infancy and this version was used: https://github.com/DRL/blobtools-light . 
 ``clc_assembly_remove_contaminants.sh``
-The folder R.padi_contaimination_filtering contains exact command used, and how blobplots were generated. And how contaiminat contigs were identified. 
+The folder R.padi_contaimination_filtering contains exact command used, and how blobplots were generated. And how contaiminat contigs were identified and those contirbuting reads were removed.
 
-2) once the reads were "cleaned", the final reads were converted to sam/bam using:
+2) Once the reads were "cleaned", the final reads were converted to sam/bam using:
 ``./fastq_to_sam.py``  ``fastq_to_bam.sh``
 
-3) The resulting bam file were subjected to assembly using DISCOVAR, for example:
+3) The resulting bam file was subjected to assembly using DISCOVAR, for example:
 ``discovar_assemble_genome.sh``
 
 Assemblers: platanus_v7, IBDA, Abyss, SOAP, Spades were all tried but the results were not used.
 Bless error corrected reads were tried but not used in the final assembly. 
 
-4) Busco with arthropoda busco models was used to gain a relative measure of genome "completeness", along with CEGMA:
+4) Busco with arthropoda hmm models was used to gain a relative measure of genome "completeness", along with CEGMA:
 ``BUSCO.sh``
 ``cegma_all.sh``
 
@@ -30,7 +30,8 @@ Gene models
 ===========
 RNAseq data from previous aphid studies was used, for heads versus bodies RNAseq data: 
 ``Data_Summary_APHID_RNASEQ.xlsx``
-Diuraphis noxia data from 
+Diuraphis noxia data from:
+
 http://www.ebi.ac.uk/ena/data/view/SRR1999270
 
 http://www.ebi.ac.uk/ena/data/view/SRX962821
@@ -43,7 +44,8 @@ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR199/009/SRR1999279/SRR1999279_1.fastq
 
 wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR199/009/SRR1999279/SRR1999279_2.fastq.gz
 
-A. pisum data from 
+A. pisum data from:
+
 data from http://www.ebi.ac.uk/ena/data/view/PRJNA209321
 
 wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR924/SRR924106/SRR924106_1.fastq.gz
@@ -70,7 +72,7 @@ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR924/SRR924122/SRR924122_1.fastq.gz
 
 wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR924/SRR924122/SRR924122_2.fastq.gz
 
-1) verson 0.9 gene calls were produced using the folowing script. This uses the pea aphid config files bundled with Augustus:
+1) Verson 0.9 gene calls were produced using the folowing script. This uses the pea aphid config files bundled with Augustus:
 ``Augustus.sh``
 
 2) RNAseq was mapped back to the final genome using a splice aware aligner, STAR. This allowed --outFilterMultimapNmax 5 --outFilterMismatchNmax 7: 
@@ -91,7 +93,7 @@ https://github.com/peterthorpe5/public_scripts/tree/master/gene_model_testing
 Gene model annotation and analysis
 ==================================
 
-6) signal peptide and transmembrane domain rediction was perfomed using:
+6) Signal peptide and transmembrane domain rediction was perfomed using:
 ``PHOBIUS.sh``
 
 7) Diamond blast output was taxonomically annotated using:
@@ -156,10 +158,10 @@ https://github.com/HullUni-bioinformatics/TE-search-tools
 
 ``wheat_LTR_TE_finding.sh`` and ``wheat_aphid_TE_finding.sh``
 
-22) differential exon expression:
+22) Differential exon expression:
 ``Mp_Hosts_non_hosts_DE_exons_R_commands.sh`` and ``exon_counts.sh``
 
-23) differential expression:
+23) Differential expression:
 ``Diff_Expression_trinity_Aug_2014_gene_models.sh``
 
 24) RNAseq mapping host and nonhost:
