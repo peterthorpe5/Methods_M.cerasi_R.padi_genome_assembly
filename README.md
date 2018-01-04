@@ -11,7 +11,8 @@ Genome assembly
 8 rounds were performed for M. cerasi and 5 were performed for R. padi. However, at the time of assembly
 Blobtools was in its infancy and this version was used: https://github.com/DRL/blobtools-light . 
 ``clc_assembly_remove_contaminants.sh``
-The folder R.padi_contaimination_filtering contains exact command used, and how blobplots were generated. And how contaiminat contigs were identified and those contirbuting reads were removed.
+The folder R.padi_contaimination_filtering contains exact command used, and how blobplots were generated. 
+And how contaiminat contigs were identified and those contributing reads were removed.
 
 2) Once the reads were "cleaned", the final reads were converted to sam/bam using:
 ``./fastq_to_sam.py``  ``fastq_to_bam.sh``
