@@ -207,6 +207,23 @@ Genes at the start or end of contigs were not drawn on the heat map and were not
 ``A.pisum.AA.annotated_with_old_names.fasta.gz`` and 
 ``A.pisum_OLD_to_NEW_GENES_overlap.tab.gz``
 
+
+RNAseq analysis
+===============
+
 30) RNAseq data: The raw RNAseq reads for R. padi and M. persicae reared on host, nonhost and artificial diet at time points 3hours and 24 hours are available at study accession: PRJEB24317
 
 ``PRJEB24317_data_summary.xlsx`` is a data summary which will hopefully be helpful due to the vast number of files: AD = artificial diet, H = host and NH = non host. 
+
+31) shell scripts used are in ``RNAseq_analysis``
+
+32) Quality control was performed using: ``Quality_control_final_QC_reads``
+
+33) Read were mapped to the genomes using STAR. The resulting bam files were assebmled using Trinity. 
+
+Trinity Genome guided RNaseq assemblies were produced.  ``Trinity_assembly/Rp_hostnon_GG_Trinity.sh``
+
+34) Transcript abundance was quantified using Kalisto. 
+
+33) annotating the transcriptome: ``Annotating_transcriptome``
+
