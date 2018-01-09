@@ -7,6 +7,8 @@ basic usage for most python scripts (python folder, or follow links) to obtain t
 
 Genome assembly
 ===============
+The raw genomic reads for M. cerasi and R. padi are available at study accession: PRJEB24287 and PRJEB24204, respectively
+
 1) First pass assemblies were generated using CLC. An interative process of contaminant read removal was performed, as can be seen in the following shell script. 
 8 rounds were performed for M. cerasi and 5 were performed for R. padi. However, at the time of assembly
 Blobtools was in its infancy and this version was used: https://github.com/DRL/blobtools-light . 
@@ -205,9 +207,6 @@ Genes at the start or end of contigs were not drawn on the heat map and were not
 ``A.pisum.AA.annotated_with_old_names.fasta.gz`` and 
 ``A.pisum_OLD_to_NEW_GENES_overlap.tab.gz``
 
+30) RNAseq data: The raw RNAseq reads for R. padi and M. persicae reared on host, nonhost and artificial diet at time points 3hours and 24 hours are available at study accession: PRJEB24317
 
-
-
-
-
-
+``PRJEB24317_data_summary.xlsx`` is a data summary which will hopefully be helpful due to the vast number of files: AD = artificial diet, H = host and NH = non host. 
